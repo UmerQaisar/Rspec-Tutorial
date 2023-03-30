@@ -8,11 +8,6 @@ RSpec.describe Leader, type: :model do
     it 'with first name, last name, email and phone number present' do
       expect(leader).to be_valid
     end
-
-    # it 'when group is not present' do
-    #   leader.group = nil
-    #   expect(group).to be_valid
-    # end
   end
 
   context 'Should not be valid' do
