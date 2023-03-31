@@ -12,6 +12,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new group_params
     if @group.save
+      flash[:notice] = 'Group has created successfully'
       redirect_to groups_path
     else
       render :new
@@ -22,6 +23,7 @@ class GroupsController < ApplicationController
 
   def update
     if @group.update group_params
+      flash[:notice] = 'Group has updated successfully'
       redirect_to groups_path
     else
       render :edit
@@ -30,13 +32,14 @@ class GroupsController < ApplicationController
 
   def destroy
     @group.destroy
+    flash[:notice] = 'Group has deleted successfully'
     redirect_to groups_path
   end
 
   private
 
   def group_params
-    params.require(:group).permit(:first_name, :last_name, :email, :phone_number)
+    params.require(:group).permit(:name, :group_type, :description, :size)
   end
 
   def group

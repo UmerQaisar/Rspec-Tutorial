@@ -12,7 +12,7 @@ class LeadersController < ApplicationController
   def create
     @leader = Leader.new leader_params
     if @leader.save
-      redirect_to leaders_path
+      redirect_to leaders_path, notice: 'Leader has created successfully'
     else
       render :new
     end
@@ -22,7 +22,7 @@ class LeadersController < ApplicationController
 
   def update
     if @leader.update leader_params
-      redirect_to leaders_path
+      redirect_to leaders_path, notice: 'Leader has updated successfully'
     else
       render :edit
     end
@@ -30,6 +30,7 @@ class LeadersController < ApplicationController
 
   def destroy
     @leader.destroy
+    flash[:notice] = 'Leader has deleted successfully'
     redirect_to leaders_path
   end
 
