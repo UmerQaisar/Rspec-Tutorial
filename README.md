@@ -1,24 +1,5 @@
-# README
+# Repository Name
+Rspec-Tutorial is a Git repository that provides guidance on how to write test cases using RSpec for models and controllers in Ruby on Rails applications.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Medium Blog
+For more detailed information on how to write test cases using RSpec for models and controllers, please refer to the accompanying Medium blog post: [The Ultimate Guide to RSpec Testing in Rails: Models and Controllers](https://medium.com/p/3acd2a67f3cd)
